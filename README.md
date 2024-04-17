@@ -53,4 +53,4 @@ A aplicação web foi convertida em um aplicativo desktop
 
 ### Licença
 
-Este projeto está sob a licença MIT. Consulte o arquivo <a href="https://github.com/alexandrefreitass/auxilio-texto/blob/master/LICENSE.txt">LICENSE</a> para obter mais detalhes.
+Este projeto está sob a licença MIT. Consulte o arquivo <a href="https://github.com/alexandrefreitass/auxilio-texto/blob/master/LICENSE">LICENSE</a> para obter mais detalhes.
