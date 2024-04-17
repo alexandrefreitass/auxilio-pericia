@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html>
+<html>
+        <head>
+        <title>PERÍCIAS COPOM CPI-2</title>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>	
+        <script src="jquery-3.5.1.min.js"></script>
+        <script src="scriptCadaver.js"></script>
+		<link href="estilo.css" rel="stylesheet">
+        </head>
+<body onload="save()" onunload="save()" bgcolor="Grey">
+<script type="text/javascript">
+                function proximaPagina1(){
+                window.location.href = "cadaver2.html";
+                }
+                function proximaPagina2(){
+                window.location.href = "cadaver1.html";
+                }
+                function proximaPagina3(){
+                window.location.href = "pericia3.html";
+                }
+        </script>
+
+<center><p><b><h2>PMESP</h2></b></p></center>
+<center><p><b><h1>COPOM</h1></b></p></center>
+<center><p><b><h2>CPI-2</h2></b></p></center>
+<center><p><b><h2>PERÍCIAS</h2></b></p></center>
+<hr>
+<center><p><b><u><h3>ENCONTRO DE CADÁVER</h3></u></b></p></center>
+<hr>
+<form name="cadaver1" id="cadaver1" action="cadaver2.html" method="post">
+<textarea id="campoTeste" name="campoTeste" style="display:none">A EQUIPE POLICIAL NO LOCAL INFORMA QUE A VÍTIMA ENCONTRADA EM </textarea></form>
+
+<form name="cadaver1" id="cadaver1" action="cadaver2.html" method="post">
+<p><b><h3>QUE TIPO DE LOCAL ACONTECEU?</p>
+<SELECT onchange="selectedA(this.value)" VALUE="Boolean" id="campo1" name="campo1" style = "height: 50px; width:300px;font-size:18px;text-transform:uppercase">
+<OPTION VALUE="NÃO INFORMADO"></OPTION>
+<OPTION VALUE="ESTABELECIMENTO COMERCIAL,">ESTAB. COMERCIAL</OPTION>
+<OPTION VALUE="RESIDÊNCIA,">RESIDÊNCIA</OPTION>
+<OPTION VALUE="VIA PÚBLICA,">VIA PÚBLICA</OPTION>
+<OPTION VALUE="OUTROS,">OUTROS</OPTION></b></SELECT>
+
+<div class="especifique1" style="display:none;text-transform:uppercase">
+<p><b>ESPECIFIQUE:</p>
+<input type "text" id="campo1_1_1" name="campo1_1_1" placeholder="NOME DO COMERCIO, CRUZAMENTO, REFERÊNCIA, ESPECIFIQUE O LOCAL... " style = "height: 50px; width:850px; font-size: 18px;text-transform:uppercase"></b></p>
+</div>
+<script>
+
+        function selectedA(value){
+		var especifique1= document.getElementsByClassName('especifique1');
+			if((value !="NÃO INFORMADO")&&(value!="RESIDÊNCIA,")){
+			especifique1[0].style.display='block';
+			}else{
+			especifique1[0].style.display = 'none';
+			}
+			}
+
+</script>
+</form>
+<p><b>ONDE ESTÁ O CORPO?</p>
+<input type "text" id="campo1_1" name="campo1_1" placeholder="RUA, RIO, MATA, NO QUARTO, QUINTAL DA RESIDENCIA, ETC..." style = "height: 50px; width:850px; font-size: 18px;text-transform: uppercase;"></b>
+</form>
+
+<form name="cadaver1" id="cadaver1" action="cadaver2.html" method="post">
+<p><b>O LOCAL ESTÁ PRESERVADO?</p>
+<SELECT VALUE="Boolean" id="campo1_2" name="campo1_2" style = "height: 50px; width:300px;font-size: 18px;">
+<OPTION VALUE="NÃO INFORMADO"></OPTION>
+<OPTION VALUE="O LOCAL ESTÁ PRESERVADO">SIM</OPTION>
+<OPTION VALUE="O LOCAL NÃO ESTÁ PRESERVADO">NÃO</OPTION></b></SELECT>
+</form>
+
+<form name="cadaver1" id="cadaver1" action="cadaver2.html" method="post">
+<p><b>O CORPO ESTÁ EM RIGIDEZ CADAVÉRICA?</p>
+<SELECT VALUE="Boolean" id="campo1_3" name="campo1_3" style = "height: 50px; width:300px;font-size: 18px;">
+<OPTION VALUE="NÃO INFORMADO"></OPTION>
+<OPTION VALUE="O CORPO ESTÁ EM RIGIDEZ CADAVÉRICA">SIM</OPTION>
+<OPTION VALUE="O CORPO NÃO ESTÁ EM RIGIDEZ CADAVÉRICA">NÃO</OPTION></b></SELECT>
+</form>
+
+<form name="cadaver1" id="cadaver1" action="cadaver2.html" method="post">
+<p><b>QUAL A POSSÍVEL CAUSA DA MORTE? ESPECIFIQUE:</p>
+<input type "text" id="campo1_4" name="campo1_4" placeholder=" " style = "height: 50px; width:850px; font-size: 18px;text-transform: uppercase;"></b>
+</form>
+
+<form name="cadaver1" id="cadaver1" action="cadaver2.html" method="post">
+<p><b>O SOCORRO MÉDICO FOI NO LOCAL?</p>
+<SELECT VALUE="Boolean" id="campo1_5" name="campo1_5" style = "height: 50px; width:300px;font-size: 18px;">
+<OPTION VALUE="NÃO INFORMADO"></OPTION>
+<OPTION VALUE="O SOCORRO MÉDICO FOI NO LOCAL:">SIM</OPTION>
+<OPTION VALUE="O SOCORRO MÉDICO NÃO FOI NO LOCAL">NÃO</OPTION></b></SELECT>
+</form>
+
+<form name="cadaver1" id="cadaver1" action="cadaver2.html" method="post">
+<p><b>QUAL MODALIDADE?</p>
+<SELECT value="Boolean" id="campo1_6" name="campo1_6" style = "height: 50px; width:300px;font-size: 18px;">
+<OPTION VALUE=" "></OPTION>
+<OPTION VALUE="SAMU DE PREFIXO, ">SAMU</OPTION>
+<OPTION VALUE="BOMBEIRO DE PREFIXO, ">BOMBEIRO</OPTION>
+<OPTION VALUE="OUTROS,">OUTROS</OPTION></b></SELECT>
+</form>
+
+<form name="cadaver1" id="cadaver1" action="cadaver2.html" method="post">
+<p><b>QUAL O PREFIXO?</p>
+<input type "text" id="campo1_7" name="campo1_7" placeholder="EXEMPLO UR07101, A-01" style = "height: 50px; width:300px; font-size: 18px;text-transform: uppercase;"></b>
+</form>
+
+<form name="cadaver1" id="cadaver1" action="cadaver2.html" method="post">
+<p><b>NOME DO ENCARREGADO/PROFISSIONAL DA SAÚDE:</p>
+<input type "text" id="campo1_8" name="campo1_8" placeholder="NOME E CRM" style = "height: 50px; width:300px; font-size: 18px;text-transform: uppercase;"></b>
+</form>
+
+<form name="cadaver1" id="cadaver1" action="cadaver2.html" method="post">
+<p><b>TEM OBJETOS A SEREM RECOLHIDOS NO LOCAL?</p>
+<SELECT VALUE="Boolean" id="campo1_9" name="campo1_9" style = "height: 50px; width:300px;font-size: 18px;">
+<OPTION VALUE="NÃO INFORMADO"></OPTION>
+<OPTION VALUE="TEM OBJETOS A SEREM RECOLHIDOS:">SIM</OPTION>
+<OPTION VALUE="NÃO TEM OBJETOS A SEREM RECOLHIDOS,">NÃO</OPTION></b></SELECT>
+<p><b>ESPECIFIQUE:</p>
+<input type "text" id="campo1_10" name="campo1_10" placeholder="CÁPSULAS, FACA, ARMA OU OUTROS OBJETOS... " style = "height: 50px; width:850px; font-size: 18px;text-transform: uppercase;"></b>
+</form>
+
+<form name="cadaver1" id="cadaver1" action="cadaver2.html" method="post">
+<p><b>TEM INDIVÍDUOS DETIDOS?</p>
+<SELECT VALUE="Boolean" id="campo1_11" name="campo1_11" style = "height: 50px; width:300px;font-size: 18px;">
+<OPTION VALUE=", NÃO INFORMADO SE TEM INDIVÍDUOS DETIDOS"></OPTION>
+<OPTION VALUE=", TEM INDIVÍDUOS DETIDOS:">SIM</OPTION>
+<OPTION VALUE=", NÃO TEM INDIVÍDUOS DETIDOS, ">NÃO</OPTION></b></SELECT>
+<p><b>ESPECIFIQUE:</p>
+<input type "text" id="campo1_12" name="campo1_12" placeholder="NOME E RG OU NOME E SE É OU NÃO MAIOR DE IDADE " style = "height: 50px; width:850px; font-size: 18px;text-transform: uppercase;"></b>
+</form>
+
+<form name="cadaver1" id="cadaver1" action="cadaver2.html" method="post">
+<p><b>POSSUI MARCAS DE SANGUE, TIROS OU PEGADAS?</p>
+<SELECT VALUE="Boolean" id="campo1_13" name="campo1_13" style = "height: 50px; width:300px;font-size: 18px;">
+<OPTION VALUE="NÃO INFORMADO"></OPTION>
+<OPTION VALUE="NO LOCAL TEM MARCAS DE SANGUE/PEGADAS:">SIM</OPTION>
+<OPTION VALUE="NO LOCAL NÃO TEM MARCAS DE SANGUE/PEGADAS,">NÃO</OPTION></b></SELECT>
+<p><b>ESPECIFIQUE:</p>
+<input type "text" id="campo1_14" name="campo1_14" placeholder=" " style = "height: 50px; width:850px; font-size: 18px;text-transform: uppercase;"></b>
+</form>
+
+<form name="cadaver1" id="cadaver1" action="cadaver2.html" method="post">
+<p><b>POSSUI IDENTIFICAÇÃO DA VÍTIMA?</p>
+<SELECT VALUE="Boolean" id="campo1_15" name="campo1_15" style = "height: 50px; width:300px;font-size: 18px;">
+<OPTION VALUE=", NÃO INFORMADO SE TEM IDENTIFICAÇÃO DA VÍTIMA"></OPTION>
+<OPTION VALUE=", TEM IDENTIFICAÇÃO DA(S) VÍTIMA(S):">SIM</OPTION>
+<OPTION VALUE=", NÃO TEM IDENTIFICAÇÃO DA(S) VÍTIMA(S),">NÃO</OPTION></b></SELECT>
+</form>
+
+<form name="cadaver1" id="cadaver1" action="cadaver2.html" method="post">
+<p><b>NOME E RG DA VITIMA:</p>
+<input type "text" id="campo1_17" name="campo1_17" placeholder=" " style = "height: 50px; width:300px; font-size: 18px;text-transform: uppercase;"></b>
+</form>
+
+<form name="cadaver1" id="cadaver1" action="cadaver2.html" method="post">
+<p><b>IDADE DA VITIMA:</p>
+<input type "text" id="campo1_18" name="campo1_18" placeholder="PODE SER APROXIMADA" style = "height: 50px; width:300px; font-size: 18px;text-transform: uppercase;"></b>
+</form>
+
+<form name="cadaver1" id="cadaver1" action="cadaver2.html" method="post">
+<p><b>SEXO DA VÍTIMA:</p>
+<SELECT value="Boolean" id="campo1_19" name="campo1_19" style = "height: 50px; width:300px;font-size: 18px;text-transform: uppercase;">
+<OPTION VALUE="NÃO INFORMADO"></OPTION>
+<OPTION VALUE="SEXO MASCULINO">MASCULINO</OPTION>
+<OPTION VALUE="SEXO FEMININO">FEMININO</OPTION></b></SELECT>
+</form>
+
+<form name="cadaver1" id="cadaver1" action="cadaver2.html" method="post">
+<p><b>PESO DA VÍTIMA(CASO ESTIVER EM ÓBITO):</p>
+<input type "text" id="campo1_20" name="campo1_20" placeholder="EM KG" style = "height: 50px; width:300px; font-size: 18px;text-transform: uppercase;"></b>
+</form>
+
+<form name="cadaver1" id="cadaver1" action="cadaver2.html" method="post">
+<p><b>ALTURA DA VÍTIMA:(CASO ESTIVER EM ÓBITO)</p>
+<input type "text" id="campo1_21" name="campo1_21" placeholder="EM METROS" style = "height: 50px; width:300px; font-size: 18px;text-transform: uppercase;"></b>
+</form>
+
+<form name="cadaver1" id="cadaver1" action="cadaver2.html" method="post">
+<p><b>COR DA PELE DA VÍTIMA:(CASO ESTIVER EM ÓBITO)</p>
+<input type "text" id="campo1_22" name="campo1_22" placeholder="PELE PARDA, BRANCA, PRETA..." style = "height: 50px; width:300px; font-size: 18px;text-transform: uppercase;"></b>
+</form>
+
+<form name="cadaver1" id="cadaver1" action="cadaver2.html" method="post">
+<p><b>OS FAMILIARES ESTÃO NO LOCAL?</p>
+<SELECT VALUE="Boolean" id="campo1_23" name="campo1_23" style = "height: 50px; width:300px;font-size: 18px;">
+<OPTION VALUE="NÃO INFORMADO"></OPTION>
+<OPTION VALUE="OS FAMILIARES ESTÃO NO LOCAL">SIM</OPTION>
+<OPTION VALUE="OS FAMILIARES NÃO ESTÃO NO LOCAL">NÃO</OPTION></b></SELECT>
+</form>
+
+<form name="cadaver1" id="cadaver1" action="cadaver2.html" method="post">
+<p><b>A VÍTIMA MORAVA SOZINHA?(CASO FOR RESIDÊNCIA)</p>
+<SELECT VALUE="Boolean" id="campo1_24" name="campo1_24" style = "height: 50px; width:300px;font-size: 18px;">
+<OPTION VALUE="NÃO INFORMADO"></OPTION>
+<OPTION VALUE="A VÍTIMA MORAVA SOZINHA">SIM</OPTION>
+<OPTION VALUE="A VÍTIMA NÃO MORAVA SOZINHA">NÃO</OPTION></b></SELECT>
+</form>
+
+<form name="cadaver1" id="cadaver1" action="cadaver2.html" method="post">
+<p><b>INFORMAÇÕES COMPLEMENTARES:</p>
+<input type "text" id="campo1_25" name="campo1_25" placeholder="PODE ACRESCENTAR QUALQUER OUTRA INFORMAÇÃO..." style = "height: 50px; width:850px; font-size: 18px;text-transform: uppercase;"></b>
+</form>
+
+<form name="rouboFurto1" id="rouboFurto1" action="rouboFurto2.html" method="post">
+<textarea id="campoTeste2" name="campoTeste2" style="display:none">DIANTE DOS FATOS, VERIFICAR JUNTO A AUTORIDADE DE POLICIA CIVIL SE HÁ INTERESSE DE ENVIAR PERICIA PARA O LOCAL.</textarea>
+<p></p>
+</form>
+
+<center><input type="button" value= "GERAR HISTÓRICO" style = "height: 50px; width:300px; font-size: 18px;" onclick="proximaPagina1();"></button></center>
+<center><input type="button" value= "LIMPAR DADOS" style = "height: 50px; width:300px; font-size: 18px;" onclick="proximaPagina2();"></button></center>
+<center><input type="button" value= "INÍCIO" style = "height: 50px; width:300px; font-size: 18px;" onclick="proximaPagina3();"></button></center>
+</body>
+</html>

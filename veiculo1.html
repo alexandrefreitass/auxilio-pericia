@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html>
+        <head>
+        <title>PERÍCIAS COPOM CPI-2</title>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+        <script src="jquery-3.5.1.min.js"></script>
+        <script src="scriptVeiculo.js"></script>
+	<link href="estilo.css" rel="stylesheet">
+        </head>
+<body onload="save()" onunload="save()" bgcolor="Grey">
+        <script type="text/javascript">
+                function proximaPagina1(){
+                window.location.href = "veiculo2.html";
+                }
+                function proximaPagina2(){
+                window.location.href = "veiculo1.html";
+                }
+                function proximaPagina3(){
+                window.location.href = "pericia3.html";
+                }
+        </script>
+
+<center><p><b><h2>PMESP</h2></b></p></center>
+<center><p><b><h1>COPOM</h1></b></p></center>
+<center><p><b><h2>CPI-2</h2></b></p></center>
+<center><p><b><h2>PERÍCIAS</h2></b></p></center>
+<hr>
+<center><p><b><u><h3>VEÍCULO LOCALIZADO</h3></u></b></p></center>
+<hr>
+<script>
+alert("Neste caso NÃO aciona perícia! CASO haja indícios de crime tais como marcas de disparo de arma de fogo, marcas de sangue então ACIONA PERICIA.");
+</script>
+
+<form name="veiculo1" id="veiculo1" action="veiculo2.html" method="post">
+<textarea id="campoTeste" name="campoTeste" style="display:none">A EQUIPE POLICIAL NO LOCAL INFORMA QUE</textarea></form>
+
+
+<form name="veiculo1" id="veiculo1" action="veiculo2.html" method="post">
+<p><b><h3>O VEÍCULO ESTÁ ASSOCIADO A ALGUM CRIME?</p>
+<SELECT VALUE="Boolean" id="campo1" name="campo1" style = "height: 50px; width:300px;font-size: 18px;">
+<OPTION VALUE=" "></OPTION>
+<OPTION VALUE="O VEÍCULO ESTÁ ASSOCIADO A UM CRIME,">SIM</OPTION>
+<OPTION VALUE="O VEÍCULO NÃO ESTÁ ASSOCIADO A OUTRO CRIME,">NÃO</OPTION></b></h3></SELECT>
+</form>
+
+<form name="veiculo1" id="veiculo1" action="veiculo2.html" method="post">
+<p><b>O LOCAL ESTÁ PRESERVADO?</p>
+<SELECT VALUE="Boolean" id="campo1_1" name="campo1_1" style = "height: 50px; width:300px;font-size: 18px;">
+<OPTION VALUE=" "></OPTION>
+<OPTION VALUE="O LOCAL ESTÁ PRESERVADO,">SIM</OPTION>
+<OPTION VALUE="O LOCAL NÃO ESTÁ PRESERVADO,">NÃO</OPTION></b></SELECT>
+</form>
+
+<form name="veiculo1" id="veiculo1" action="veiculo2.html" method="post">
+<p><b>O VEÍCULO ESTÁ NA VIA PÚBLICA?</p>
+<SELECT VALUE="Boolean" id="campo1_2" name="campo1_2" style = "height: 50px; width:300px;font-size: 18px;">
+<OPTION VALUE=" "></OPTION>
+<OPTION VALUE="O VEÍCULO ESTÁ NA VIA PÚBLICA,">SIM</OPTION>
+<OPTION VALUE="O VEÍCULO NÃO ESTÁ NA VIA PÚBLICA,">NÃO</OPTION></b></SELECT>
+<p><b>ESPECIFIQUE:</p>
+<input type "text" id="campo1_3" name="campo1_3" placeholder="ESTACIONAMENTO, MATA, INTERIOR DE RESIDENCIA, ETC... " style = "height: 50px; width:850px; font-size: 18px;text-transform:uppercase"></b>
+</form>
+
+<form name="veiculo1" id="veiculo1" action="veiculo2.html" method="post">
+<p><b>POSSUI MARCAS DE SANGUE, TIROS OU OUTROS?</p>
+<SELECT VALUE="Boolean" id="campo1_4" name="campo1_4" style = "height: 50px; width:300px;font-size: 18px;">
+<OPTION VALUE=" "></OPTION>
+<OPTION VALUE="O VEÍCULO POSSUI MARCAS DE SANGUE/TIROS:">SIM</OPTION>
+<OPTION VALUE="O VEÍCULO NÃO POSSUI MARCAS DE SANGUE/TIROS,">NÃO</OPTION></b></SELECT>
+<p><b>ESPECIFIQUE:</p>
+<input type "text" id="campo1_5" name="campo1_5" placeholder=" " style = "height: 50px; width:850px; font-size: 18px;text-transform:uppercase"></b>
+</form>
+
+<form name="veiculo1" id="veiculo1" action="veiculo2.html" method="post">
+<p><b>TEM OBJETOS A SEREM RECOLHIDOS?</p>
+<SELECT VALUE="Boolean" id="campo1_6" name="campo1_6" style = "height: 50px; width:300px;font-size: 18px;">
+<OPTION VALUE=" "></OPTION>
+<OPTION VALUE=", TEM OBJETOS A SEREM APREENDIDOS:">SIM</OPTION>
+<OPTION VALUE="NÃO TEM OBJETOS A SEREM APREENDIDOS, ">NÃO</OPTION></b></SELECT>
+<p><b>ESPECIFIQUE:</p>
+<input type "text" id="campo1_7" name="campo1_7" placeholder=" " style = "height: 50px; width:850px; font-size: 18px;text-transform:uppercase"></b>
+</form>
+
+<form name="veiculo1" id="veiculo1" action="veiculo2.html" method="post">
+<p><b>O VEÍCULO ESTÁ ABERTO?</p>
+<SELECT VALUE="Boolean" id="campo1_8" name="campo1_8" style = "height: 50px; width:300px;font-size: 18px;">
+<OPTION VALUE=" "></OPTION>
+<OPTION VALUE=", O VEÍCULO ESTÁ ABERTO,">SIM</OPTION>
+<OPTION VALUE=", O VEÍCULO ESTÁ FECHADO,">NÃO</OPTION></b></SELECT>
+</form>
+
+<form name="veiculo1" id="veiculo1" action="veiculo2.html" method="post">
+<p><b>O VEÍCULO POSSUI DANOS?</p>
+<SELECT VALUE="Boolean" id="campo1_9" name="campo1_9" style = "height: 50px; width:300px;font-size: 18px;">
+<OPTION VALUE=" "></OPTION>
+<OPTION VALUE="O VEÍCULO POSSUI DANOS:">SIM</OPTION>
+<OPTION VALUE="O VEÍCULO NÃO POSSUI DANOS,">NÃO</OPTION></b></SELECT>
+<p><b>ESPECIFIQUE:</p>
+<input type "text" id="campo1_10" name="campo1_10" placeholder=" " style = "height: 50px; width:850px; font-size: 18px;text-transform:uppercase"></b>
+</form>
+
+<form name="veiculo1" id="veiculo1" action="veiculo2.html" method="post">
+<p><b>QUAL A PLACA DO VEÍCULO?</p>
+<input type "text" id="campo1_11" name="campo1_11" placeholder=" " style = "height: 50px; width:300px; font-size: 18px;text-transform:uppercase"></b>
+</form>
+
+<form name="veiculo1" id="veiculo1" action="veiculo2.html" method="post">
+<p><b>O VEÍCULO TEM CONDIÇÕES DE RODAGEM?</p>
+<SELECT VALUE="Boolean" id="campo1_12" name="campo1_12" style = "height: 50px; width:300px;font-size: 18px;">
+<OPTION VALUE=" "></OPTION>
+<OPTION VALUE=", O VEÍCULO TEM CONDIÇÕES DE RODAGEM, ">SIM</OPTION>
+<OPTION VALUE=", O VEÍCULO NÃO TEM CONDIÇÕES DE RODAGEM,">NÃO</OPTION></b></SELECT>
+<p><b>ESPECIFIQUE:</p>
+<input type "text" id="campo1_13" name="campo1_13" placeholder=" " style = "height: 50px; width:850px; font-size: 18px;text-transform:uppercase"></b>
+</form>
+
+<form name="veiculo1" id="veiculo1" action="veiculo2.html" method="post">
+<p><b>O VEÍCULO SÓ PRECISA DE:</p>
+<input type "text" id="campo1_14" name="campo1_14" placeholder="PRECISA DA CHAVE RESERVA, GUINCHO, RODAS, ETC..." style = "height: 50px; width:850px; font-size: 18px;text-transform:uppercase"></b>
+</form>
+
+<form name="veiculo1" id="veiculo1" action="veiculo2.html" method="post">
+<p><b>É FLAGRANTE?</p>
+<SELECT VALUE="Boolean" id="campo1_15" name="campo1_15" style = "height: 50px; width:300px;font-size: 18px;">
+<OPTION VALUE=" "></OPTION>
+<OPTION VALUE=", A OCORRÊNCIA TRATA-SE DE FLAGRANTE,">SIM</OPTION>
+<OPTION VALUE=", A OCORRÊNCIA NÃO É FLAGRANTE,">NÃO</OPTION></b></SELECT>
+</form>
+
+<form name="veiculo1" id="veiculo1" action="veiculo2.html" method="post">
+<p><b>TEM IDENTIFICAÇÃO DE PESSOA DETIDA?</p>
+<SELECT VALUE="Boolean" id="campo1_16" name="campo1_16" style = "height: 50px; width:300px;font-size: 18px;">
+<OPTION VALUE=" "></OPTION>
+<OPTION VALUE="TEM PESSOA DETIDA:">SIM</OPTION>
+<OPTION VALUE="NÃO TEM PESSOA DETIDA,">NÃO</OPTION></b></SELECT>
+<p><b>ESPECIFIQUE:</p>
+<input type "text" id="campo1_17" name="campo1_17" placeholder="RG OU CASO NAO TENHA SE É MAIOR OU MENOR E A QUANTIDADE DE INDIVIDUOS DETIDOS " style = "height: 50px; width:850px; font-size: 18px; text-transform:uppercase"></b>
+</form>
+
+<form name="veiculo1" id="veiculo1" action="veiculo2.html" method="post">
+<p><b>INFORMAÇÕES COMPLEMENTARES:</p>
+<input type "text" id="campo1_18" name="campo1_18" placeholder="PODE ACRESCENTAR QUALQUER OUTRA INFORMAÇÃO..." style = "height: 50px; width:850px; font-size: 18px;text-transform:uppercase"></b>
+</form>
+
+<form name="veiculo1" id="veiculo1" action="veiculo2.html" method="post">
+<textarea id="campoTeste2" name="campoTeste2" style="display:none">. DIANTE DOS FATOS, CIENTIFICAR A AUTORIDADE DE POLICIA CIVIL DOS FATOS OCORRIDOS.</textarea>
+<p></p>
+</form>
+
+
+<center><input type="button" value= "GERAR HISTÓRICO" style = "height: 50px; width:300px; font-size: 18px;" onclick="proximaPagina1();"></button></center>
+<center><input type="button" value= "LIMPAR DADOS" style = "height: 50px; width:300px; font-size: 18px;" onclick="proximaPagina2();"></button></center>
+<center><input type="button" value= "INÍCIO" style = "height: 50px; width:300px; font-size: 18px;" onclick="proximaPagina3();"></button></center>
+</body>
+</html>

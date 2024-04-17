@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<html>
+        <head>
+        <title>PERÍCIAS COPOM CPI-2</title>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+        <script src="jquery-3.5.1.min.js"></script>
+        <script src="scriptRouboFurto.js"></script>
+	<link href="estilo.css" rel="stylesheet">
+        </head>
+<body onload="save()" onunload="save()" bgcolor="Grey">
+        <script type="text/javascript">
+                function proximaPagina1(){
+                window.location.href = "rouboFurto2.html";
+                }
+                function proximaPagina2(){
+                window.location.href = "rouboFurto1.html";
+                }
+                function proximaPagina3(){
+                window.location.href = "pericia3.html";
+                }
+        </script>
+<center><p><b><h2>PMESP</h2></b></p></center>
+<center><p><b><h1>COPOM</h1></b></p></center>
+<center><p><b><h2>CPI-2</h2></b></p></center>
+<center><p><b><h2>PERÍCIAS</h2></b></p></center>
+<hr>
+<center><p><b><u><h3>ROUBO OU FURTO</h3></u></b></p></center>
+<hr>
+<form name="rouboFurto1" id="rouboFurto1" action="rouboFurto2.html" method="post">
+<textarea id="campoTeste" name="campoTeste" style="display:none">A EQUIPE POLICIAL NO LOCAL INFORMA</textarea></form>
+
+<form name="rouboFurto1" id="rouboFurto1" action="rouboFurto2.html" method="post">
+<p><b><h3>QUE TIPO DE LOCAL ACONTECEU?</h3></p>
+<SELECT onchange="selectedA(this.value)" VALUE="Boolean" id="campo1" name="campo1" style = "height: 50px; width:300px;font-size:18px;text-transform:uppercase">
+<OPTION VALUE="NÃO INFORMADO"></OPTION>
+<OPTION VALUE="ROUBO A ESTABELECIMENTO COMERCIAL">ROUBO A ESTAB. COMERCIAL</OPTION>
+<OPTION VALUE="FURTO A ESTABELECIMENTO COMERCIAL">FURTO A ESTAB. COMERCIAL</OPTION>
+<OPTION VALUE="ROUBO A RESIDÊNCIA">ROUBO A RESIDÊNCIA</OPTION>
+<OPTION VALUE="FURTO A RESIDÊNCIA">FURTO A RESIDÊNCIA</OPTION>
+<OPTION VALUE="ROUBO DE CARGA NA VIA PUBLICA">ROUBO DE CARGA</OPTION>
+<OPTION VALUE="FURTO DE CARGA NA VIA PUBLICA">FURTO DE CARGA</OPTION>
+<OPTION VALUE="ROUBO OUTROS">ROUBO OUTROS</OPTION>
+<OPTION VALUE="FURTO OUTROS">FURTO OUTROS</OPTION></b></SELECT>
+
+<div class="especifique1" style="display:none;text-transform:uppercase">
+<p><b><h3>ESPECIFIQUE:</h3></p>
+<input type "text" id="campo1_1_1" name="campo1_1_1" placeholder="NOME DO COMERCIO, FOI NA VIA PUBLICA, ESPECIFIQUE O LOCAL... " style = "height: 50px; width:850px; font-size: 18px;text-transform:uppercase"></b></p>
+</div>
+<script>
+
+        function selectedA(value){
+		var especifique1= document.getElementsByClassName('especifique1');
+			if((value !="NÃO INFORMADO")&&(value!="FURTO A RESIDÊNCIA")&&(value!="ROUBO A RESIDÊNCIA")){
+			especifique1[0].style.display='block';
+			}else{
+			especifique1[0].style.display = 'none';
+			}
+			}
+
+</script>
+</form>
+
+<p><b><h3>O QUE FOI LEVADO?</p>
+<input type "text" id="campo1_1" name="campo1_1" placeholder="JOIAS, PERFUMES, UM NOTEBOOK, ETC... " style = "height: 50px; width:850px; font-size: 18px;text-transform: uppercase;" ></h3></b>
+</form>
+
+<form name="rouboFurto1" id="rouboFurto1" action="rouboFurto2.html" method="post">
+<p><b><h3>HOUVE ARROMBAMENTO OU DANOS?</p>
+<SELECT VALUE="Boolean" id="campo1_2" name="campo1_2" style = "height: 50px; width:300px;font-size: 18px;">
+<OPTION VALUE="NÃO INFORMADO"></OPTION>
+<OPTION VALUE="HOUVE ARROMBAMENTO OU DANOS: ">SIM</OPTION>
+<OPTION VALUE="NÃO HOUVE ARROMBAMENTO OU DANOS, ">NÃO</OPTION></b></h3></SELECT>
+<p><b>ESPECIFIQUE:</p>
+<input type "text" id="campo1_3" name="campo1_3" placeholder="POR ONDE ENTRARAM OU SE FOI ESCALADA, ARROMBADO PORTA OU JANELA, ETC..." style = "height: 50px; width:850px; font-size: 18px;text-transform: uppercase;"></b>
+</form>
+
+<form name="rouboFurto1" id="rouboFurto1" action="rouboFurto2.html" method="post">
+<p><b>O LOCAL ESTÁ PRESERVADO?</p>
+<SELECT VALUE="Boolean" id="campo1_4" name="campo1_4" onchange="selectedPreservado(this.value)" style = "height: 50px; width:300px;font-size: 18px;">
+<OPTION VALUE="NÃO INFORMADO"></OPTION>
+<OPTION VALUE="ESTÁ PRESERVADO, ">SIM</OPTION>
+<OPTION VALUE="NÃO ESTÁ PRESERVADO, ">NÃO</OPTION></b></SELECT>
+<p><b>SE NECESSÁRIO ESPECIFIQUE:</p>
+<input type "text" id="campo1_5" name="campo1_5" placeholder=" " style = "height: 50px; width:850px; font-size: 18px;text-transform: uppercase;"></b>
+</form>
+
+<script>
+	function selectedPreservado(value){
+	if(value=="NÃO ESTÁ PRESERVADO"){
+	alert("Se o local já está foi limpo, já houve o conserto da porta, não tendo nenhum outro campo para a Perícia. NÃO ACIONA PERÍCIA. Continue o preenchimento e posterior avise a Unidade de Serviço");
+}
+}
+</script>
+
+<form name="rouboFurto1" id="rouboFurto1" action="rouboFurto2" method="post">
+<p><b>HOUVE DISPARO DE ARMA DE FOGO?</p>
+<SELECT VALUE="Boolean" id="campo1_6" name="campo1_6" style = "height: 50px; width:300px;font-size: 18px;">
+<OPTION VALUE="NÃO INFORMADO"></OPTION>
+<OPTION VALUE="HOUVE DISPARO DE ARMA DE FOGO: ">SIM</OPTION>
+<OPTION VALUE="NÃO HOUVE DISPARO DE ARMA DE FOGO, ">NÃO</OPTION></b></SELECT>
+<p><b>ESPECIFIQUE:</p>
+<input type "text" id="campo1_7" name="campo1_7" placeholder=" " style = "height: 50px; width:900px; font-size: 18px;text-transform: uppercase;"></b>
+</form>
+
+<form name="rouboFurto1" id="rouboFurto1" action="rouboFurto2.html" method="post">
+<p><b>POSSUI MARCAS DE SANGUE, TIROS OU PEGADAS?</p>
+<SELECT VALUE="Boolean" id="campo1_8" name="campo1_8" style = "height: 50px; width:300px;font-size: 18px;">
+<OPTION VALUE="NÃO INFORMADO"></OPTION>
+<OPTION VALUE="TEM MARCAS DE SANGUE/PEGADAS:">SIM</OPTION>
+<OPTION VALUE="NÃO TEM MARCAS DE SANGUE/PEGADAS, ">NÃO</OPTION></b></SELECT>
+<p><b>ESPECIFIQUE:</p>
+<input type "text" id="campo1_9" name="campo1_9" placeholder=" " style = "height: 50px; width:850px; font-size: 18px;text-transform: uppercase;"></b>
+</form>
+
+<form name="rouboFurto1" id="rouboFurto1" action="rouboFurto2.html" method="post">
+<p><b>TEM OBJETOS A SEREM RECOLHIDOS NO LOCAL?</p>
+<SELECT VALUE="Boolean" id="campo1_10" name="campo1_10" style = "height: 50px; width:300px;font-size: 18px;">
+<OPTION VALUE="NÃO INFORMADO"></OPTION>
+<OPTION VALUE="TEM OBJETOS A SEREM RECOLHIDOS:">SIM</OPTION>
+<OPTION VALUE="NÃO TEM OBJETOS A SEREM RECOLHIDOS, ">NÃO</OPTION></b></SELECT>
+<p><b>ESPECIFIQUE:</p>
+<input type "text" id="campo1_11" name="campo1_11" placeholder="CÁPSULAS, FACA OU OUTROS OBJETOS... " style = "height: 50px; width:850px; font-size: 18px;text-transform: uppercase;"></b>
+</form>
+
+<form name="rouboFurto1" id="rouboFurto1" action="rouboFurto2.html" method="post">
+<p><b>TEM INDIVÍDUOS DETIDOS?</p>
+<SELECT VALUE="Boolean" id="campo1_12" name="campo1_12" style = "height: 50px; width:300px;font-size: 18px;">
+<OPTION VALUE="NÃO INFORMADO"></OPTION>
+<OPTION VALUE="TEM INDIVÍDUOS DETIDOS: ">SIM</OPTION>
+<OPTION VALUE="NÃO TEM INDIVÍDUOS DETIDOS, ">NÃO</OPTION></b></SELECT>
+<p><b>ESPECIFIQUE:</p>
+<input type "text" id="campo1_13" name="campo1_13" placeholder="NOME E RG DO DETIDO OU SE É MAIOR OU MENOR " style = "height: 50px; width:850px; font-size: 18px;text-transform: uppercase;"></b>
+</form>
+
+<form name="rouboFurto1" id="rouboFurto1" action="rouboFurto2.html" method="post">
+<p><b>TEM VÍTIMAS?</p>
+<SELECT VALUE="Boolean" id="campo1_14" name="campo1_14" style = "height: 50px; width:300px;font-size: 18px;">
+<OPTION VALUE="NÃO INFORMADO"></OPTION>
+<OPTION VALUE="HÁ VITIMAS: ">SIM</OPTION>
+<OPTION VALUE="NÃO HÁ VÍTIMAS, ">NÃO</OPTION></b></SELECT>
+<p><b>COLOQUE NOME, RG E ESTADO DAS VITIMAS:</p>
+<input type "text" id="campo1_15" name="campo1_15" placeholder="CASO NAO TENHA QUALIFICAÇÃO LEVANTAR SEXO, SE É MAIOR OU MENOR... " style = "height: 50px; width:850px; font-size: 18px;text-transform: uppercase;"></b>
+</form>
+
+<form name="rouboFurto1" id="rouboFurto1" action="rouboFurto2.html" method="post">
+<p><b>O PROPRIETÁRIO ESTÁ NO LOCAL?</p>
+<SELECT VALUE="Boolean" id="campo1_16" name="campo1_16" style = "height: 50px; width:300px;font-size: 18px;">
+<OPTION VALUE="NÃO INFORMADO"></OPTION>
+<OPTION VALUE="O PROPRIETARIO ESTÁ NO LOCAL: ">SIM</OPTION>
+<OPTION VALUE="O PROPRIETARIO NÃO ESTÁ NO LOCAL, ">NÃO</OPTION></b></SELECT>
+<p><b>ESPECIFIQUE:</p>
+<input type "text" id="campo1_17" name="campo1_17" placeholder="COLOQUE O NOME E RG OU O RESPONSAVEL QUE ESTA NO LOCAL" style = "height: 50px; width:850px; font-size: 18px;text-transform: uppercase;"></b>
+</form>
+
+<form name="rouboFurto1" id="rouboFurto1" action="rouboFurto2.html" method="post">
+<p><b>O SOCORRO FOI NO LOCAL?</p>
+<SELECT VALUE="Boolean" id="campo1_18" name="campo1_18" style = "height: 50px; width:300px;font-size: 18px;">
+<OPTION VALUE=" "></OPTION>
+<OPTION VALUE="O SOCORRO MÉDICO FOI NO LOCAL">SIM</OPTION>
+<OPTION VALUE="O SOCORRO MÉDICO NÃO FOI NO LOCAL,">NÃO</OPTION></b></SELECT>
+</form>
+
+<form name="rouboFurto1" id="rouboFurto1" action="rouboFurto2.html" method="post">
+<p><b>QUAL MODALIDADE?</p>
+<SELECT value="Boolean" id="campo1_19" name="campo1_19" style = "height: 50px; width:300px;font-size: 18px;">
+<OPTION VALUE=" "></OPTION>
+<OPTION VALUE="SAMU DE PREFIXO:">SAMU</OPTION>
+<OPTION VALUE="BOMBEIRO DE PREFIXO:">BOMBEIRO</OPTION>
+<OPTION VALUE="OUTROS">OUTROS</OPTION></b></SELECT>
+</form>
+
+<form name="rouboFurto1" id="rouboFurto1" action="rouboFurto2.html" method="post">
+<p><b>QUAL O PREFIXO?</p>
+<input type "text" id="campo1_20" name="campo1_20" placeholder="EXEMPLO UR07101, A-01" style = "height: 50px; width:300px; font-size: 18px;text-transform: uppercase;"></b>
+</form>
+
+<form name="rouboFurto1" id="rouboFurto1" action="rouboFurto2.html" method="post">
+<p><b>NOME DO ENCARREGADO/PROFISSIONAL DA SAÚDE:</p>
+<input type "text" id="campo1_21" name="campo1_21" placeholder="NOME E CRM" style = "height: 50px; width:300px; font-size: 18px;text-transform: uppercase;"></b>
+</form>
+
+<form name="rouboFurto1" id="rouboFurto1" action="rouboFurto2.html" method="post">
+<p><b>PARA ONDE FOI/FORAM SOCORRIDO(S)?</p>
+<input type "text" id="campo1_22" name="campo1_22" placeholder=" " style = "height: 50px; width:300px; font-size: 18px;text-transform: uppercase;"></b>
+</form>
+
+<form name="rouboFurto1" id="rouboFurto1" action="rouboFurto2.html" method="post">
+<p><b>INFORMAÇÕES COMPLEMENTARES:</p>
+<input type "text" id="campo1_23" name="campo1_23" placeholder="PODE ACRESCENTAR QUALQUER OUTRA INFORMAÇÃO..." style = "height: 50px; width:850px; font-size: 18px;text-transform: uppercase;"></b>
+<p></p>
+</form>
+
+<form name="rouboFurto1" id="rouboFurto1" action="rouboFurto2.html" method="post">
+<textarea id="campoTeste2" name="campoTeste2" style="display:none">DIANTE DOS FATOS, VERIFICAR JUNTO A AUTORIDADE DE POLICIA CIVIL SE HÁ INTERESSE DE ENVIAR PERICIA PARA O LOCAL.</textarea></form>
+
+
+<center><input type="button" value= "GERAR HISTÓRICO" style = "height: 50px; width:300px; font-size: 18px;" onclick="proximaPagina1();"></button></center>
+<center><input type="button" value= "LIMPAR DADOS" style = "height: 50px; width:300px; font-size: 18px;" onclick="proximaPagina2();"></button></center>
+<center><input type="button" value= "INÍCIO" style = "height: 50px; width:300px; font-size: 18px;" onclick="proximaPagina3();"></button></center>
+</body>
+</html>

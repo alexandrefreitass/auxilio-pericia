@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html>
+        <head>
+        <title>PERÍCIAS COPOM CPI-2</title>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+        <script src="jquery-3.5.1.min.js"></script>
+        <script src="script.js"></script>
+		<link href="estilo.css" rel="stylesheet">
+        </head>
+<body onload="save()" onunload="save()" bgcolor="Grey">
+<script type="text/javascript">
+                function proximaPagina1(){
+                window.location.href = "hospital2.html";
+                }
+                function proximaPagina2(){
+                window.location.href = "hospital1.html";
+                }
+                function proximaPagina3(){
+                window.location.href = "pericia3.html";
+                }
+        </script>
+
+<center><p><b><h2>PMESP</h2></b></p></center>
+<center><p><b><h1>COPOM</h1></b></p></center>
+<center><p><b><h2>CPI-2</h2></b></p></center>
+<center><p><b><h2>PERÍCIAS</h2></b></p></center>
+<hr>
+<center><p><b><u><h3>SOLICITAÇÃO DO HOSPITAL</h3></u></b></p></center>
+<hr>
+<script>
+alert("Neste caso NÃO aciona perícia, termine o relatório e informe a viatura que é somente Comunicação Prévia! CASO a viatura ache alguma evidencia do crime no local dos fatos, então ACIONA PERICIA.");
+</script>
+
+<form name="hospital1" id="hospital1" action="hospital2.html" method="post">
+<textarea id="campoTeste" name="campoTeste" style="display:none">A EQUIPE POLICIAL SOLICITADA DIRETAMENTE NO HOSPITAL PARA OCORRÊNCIA DE </textarea></form>
+
+<form name="hospital1" id="hospital1" action="hospital2.html" method="post">
+<p><b><h3>EXPLIQUE A NATUREZA:</h3></p>
+<SELECT onchange="selectedA(this.value)" VALUE="Boolean" id="campo1" name="campo1" style = "height: 50px; width:300px;font-size:18px;">
+<OPTION VALUE=" "></OPTION>
+<OPTION VALUE="VÍTIMA DE FACADA,">VÍTIMA DE FACADA</OPTION>
+<OPTION VALUE="VÍTIMA DE DISPARO DE ARMA DE FOGO,">VIT. DISPARO ARMA DE FOGO</OPTION>
+<OPTION VALUE="VÍTIMA DE AGRESSÃO FÍSICA,">VÍTIMA DE AGRESSÃO FÍSICA</OPTION>
+<OPTION VALUE="VÍTIMA DE VIOLÊNCIA DOMESTICA,">VÍTIMA VIOLÊNCIA DOMESTICA</OPTION>
+<OPTION VALUE="OUTROS,">OUTROS</OPTION></b></SELECT>
+
+<div class="especifique1" style="display:none">
+<p><b><h3>ESPECIFIQUE:</h3></p>
+<input type "text" id="campo1_1" name="campo1_1" placeholder="... " style = "height: 50px; width:850px; font-size: 18px;text-transform:uppercase"></b></p>
+</div>
+<script>
+        function selectedA(value){
+		var especifique1= document.getElementsByClassName('especifique1');
+			if(value != " NÃO INFORMADO, "){
+			especifique1[0].style.display='block';
+			}if(value==" OUTROS, "){
+			especifique1[0].style.display='block';
+			}			
+			else{
+			especifique1[0].style.display = 'none';
+			}
+			}
+</script>
+</form>
+
+<form name="hospital1" id="hospital1" action="hospital2.html" method="post">
+<p><b><h3>É FLAGRANTE?</p>
+<SELECT VALUE="Boolean" id="campo1_2" onchange="myFunctionFlagrante()" name="campo1_2" style = "height: 50px; width:300px;font-size: 18px;">
+<OPTION VALUE=" "></OPTION>
+<OPTION VALUE="É FLAGRANTE,">SIM</OPTION>
+<OPTION VALUE="NÃO É FLAGRANTE,">NÃO</OPTION></b></h3></SELECT>
+</form>
+<script>
+function myFunctionFlagrante(){
+let x = document.getElementById("campo1_2").value;
+if(x=="É FLAGRANTE,"){
+alert("Neste caso, termine o relatório e avise a equipe que não é necessário a comunicação prévia, pois será apresentada a ocorrência!");
+}
+}
+</script>
+
+<form name="hospital1" id="hospital1" action="hospital2.html" method="post">
+<p><b>QUAL O ESTADO DA VÍTIMA?</p>
+<SELECT value="Boolean" id="campo1_3" name="campo1_3" style = "height: 50px; width:300px;font-size: 18px;">
+<OPTION VALUE=" "></OPTION>
+<OPTION VALUE=", VÍTIMA LEVE,">LEVE</OPTION>
+<OPTION VALUE=", VÍTIMA GRAVE,">GRAVE</OPTION>
+<OPTION VALUE=", VITIMA EM ÓBITO,">MORTE</OPTION>
+<OPTION VALUE=", NÃO SABE O ESTADO DA VÍTIMA,">NÃO SABE</OPTION></b></SELECT>
+</form>
+
+<form name="hospital1" id="hospital1" action="hospital2.html" method="post">
+<p><b>QUEM SOCORREU A VÍTIMA?</p>
+<SELECT value="Boolean" id="campo1_4" name="campo1_4" style = "height: 50px; width:300px;font-size: 18px;">
+<OPTION VALUE=" "></OPTION>
+<OPTION VALUE="VÍTIMA SOCORRIDA PELO SAMU,">SAMU</OPTION>
+<OPTION VALUE="VÍTIMA SOCORRIDA PELO BOMBEIRO,">BOMBEIRO</OPTION>
+<OPTION VALUE="VÍTIMA SOCORRIDA POR FAMILIARES,">FAMILIARES</OPTION>
+<OPTION VALUE="VÍTIMA SOCORRIDA POR OUTROS,">OUTROS</OPTION></b></SELECT>
+</form>
+
+<form name="hospital1" id="hospital1" action="hospital2.html" method="post">
+<p>QUAL O PREFIXO?</p>
+<input type "text" id="campo1_5" name="campo1_5" placeholder="EXEMPLO UR07101, A-01" style = "height: 50px; width:300px; font-size: 18px;text-transform:uppercase">
+</form>
+
+<form name="hospital1" id="hospital1" action="hospital2.html" method="post">
+<p>NOME DO ENCARREGADO/PROFISSIONAL DA SAÚDE:</p>
+<input type "text" id="campo1_6" name="campo1_6" placeholder="NOME E CRM" style = "height: 50px; width:300px; font-size: 18px;text-transform:uppercase">
+</form>
+
+<form name="hospital1" id="hospital1" action="hospital2.html" method="post">
+<p><b>IRÁ PERMANECER?</p>
+<SELECT value="Boolean" id="campo1_7" name="campo1_7" style = "height: 50px; width:300px;font-size: 18px;">
+<OPTION VALUE=" "></OPTION>
+<OPTION VALUE=",A VÍTIMA IRÁ PERMANECER,">SIM</OPTION>
+<OPTION VALUE=", A VÍTIMA NÃO IRÁ PERMANECER,">NÃO</OPTION>
+<OPTION VALUE=", NÃO SABE SE A VÍTIMA IRÁ PERMANECER,">NÃO SABE</OPTION></b></SELECT>
+</form>
+
+<form name="hospital1" id="hospital1" action="hospital2.html" method="post">
+<p><b>A VÍTIMA JÁ TEVE ALTA?</p>
+<SELECT value="Boolean" id="campo1_8" name="campo1_8" style = "height: 50px; width:300px;font-size: 18px;">
+<OPTION VALUE=" "></OPTION>
+<OPTION VALUE="ELA JÁ TEVE ALTA MÉDICA,">SIM</OPTION>
+<OPTION VALUE="ELA AINDA NÃO TEVE ALTA MÉDICA,">NÃO</OPTION></b></SELECT>
+</form>
+
+<form name="hospital1" id="hospital1" action="hospital2.html" method="post">
+<p><b>SABE QUEM É O AUTOR?</p>
+<SELECT value="Boolean" id="campo1_9" name="campo1_9" style = "height: 50px; width:300px;font-size: 18px;">
+<OPTION VALUE=" "></OPTION>
+<OPTION VALUE="A VÍTIMA SABE QUEM É O AUTOR:">SIM</OPTION>
+<OPTION VALUE="A VÍTIMA NÃO SABE QUEM É O AUTOR,">NÃO</OPTION></b></SELECT>
+</form>
+
+<form name="hospital1" id="hospital1" action="hospital2.html" method="post">
+<p>SE NECESSÁRIO ESPECIFIQUE:</p>
+<input type "text" id="campo1_10" name="campo1_10" placeholder="NOME, GRAU PARENTESCO,ETC..." style = "height: 50px; width:850px; font-size: 18px;text-transform:uppercase">
+</form>
+
+<form name="hospital1" id="hospital1" action="hospital2.html" method="post">
+<p><b>POSSUI IDENTIFICAÇÃO DA VÍTIMA?</p>
+<SELECT value="Boolean" id="campo1_11" name="campo1_11" style = "height: 50px; width:300px;font-size: 18px;">
+<OPTION VALUE=" "></OPTION>
+<OPTION VALUE=", TEM IDENTIFICAÇÃO DA VÍTIMA:">SIM</OPTION>
+<OPTION VALUE=", NÃO TEM IDENTIFICAÇÃO DA VÍTIMA,">NÃO</OPTION></b></SELECT>
+</form>
+
+<form name="hospital1" id="hospital1" action="hospital2.html" method="post">
+<p>NOME E RG DA VITIMA:</p>
+<input type "text" id="campo1_12" name="campo1_12" placeholder="CASO NEGATIVO DEIXAR EM BRANCO " style = "height: 50px; width:850px; font-size: 18px;text-transform:uppercase">
+</form>
+
+<form name="hospital1" id="hospital1" action="hospital2.html" method="post">
+<p>IDADE DA VITIMA:</p>
+<input type "text" id="campo1_13" name="campo1_13" placeholder="PODE SER APROXIMADA" style = "height: 50px; width:300px; font-size: 18px;text-transform:uppercase">
+</form>
+
+<form name="hospital1" id="hospital1" action="hospital2.html" method="post">
+<p><b>SEXO DA VÍTIMA:</p>
+<SELECT value="Boolean" id="campo1_14" name="campo1_14" style = "height: 50px; width:300px;font-size: 18px;">
+<OPTION VALUE=" "></OPTION>
+<OPTION VALUE=", SEXO MASCULINO,">MASCULINO</OPTION>
+<OPTION VALUE=", SEXO FEMININO,">FEMININO</OPTION></b></SELECT>
+</form>
+
+<form name="hospital1" id="hospital1" action="hospital2.html" method="post">
+<p>INFORMAÇÕES COMPLEMENTARES:</p>
+<input type "text" id="campo1_15" name="campo1_15" placeholder="PODE ACRESCENTAR QUALQUER OUTRA INFORMAÇÃO..." style = "height: 50px; width:850px; font-size: 18px;text-transform:uppercase">
+</form>
+
+<form name="hospital1" id="hospital1" action="hospital2.html" method="post">
+<textarea id="campoTeste2" name="campoTeste2" style="display:none">DIANTE DOS FATOS, CIENTIFICAR A AUTORIDADE DE POLICIA CIVIL DOS FATOS OCORRIDOS.</textarea>
+<p></p>
+</form>
+
+<center><input type="button" value= "GERAR HISTÓRICO" style = "height: 50px; width:300px; font-size: 18px;" onclick="proximaPagina1();"></button></center>
+<center><input type="button" value= "LIMPAR DADOS" style = "height: 50px; width:300px; font-size: 18px;" onclick="proximaPagina2();"></button></center>
+<center><input type="button" value= "INÍCIO" style = "height: 50px; width:300px; font-size: 18px;" onclick="proximaPagina3();"></button></center>
+</body>
+</html>

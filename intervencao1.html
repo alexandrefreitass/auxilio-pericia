@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+        <head>
+        <title>PERÍCIAS COPOM CPI-2</title>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+        <script src="jquery-3.5.1.min.js"></script>
+        <script src="scriptIntervencao.js"></script>
+	<link href="estilo.css" rel="stylesheet">
+        </head>
+<body onload="save()" onunload="save()" bgcolor="Grey">
+        <script type="text/javascript">
+                function proximaPagina1(){
+                window.location.href = "intervencao2.html";
+                }
+                function proximaPagina2(){
+                window.location.href = "intervencao1.html";
+                }
+                function proximaPagina3(){
+                window.location.href = "pericia3.html";
+                }
+        </script>
+
+<center><p><b><h2>PMESP</h2></b></p></center>
+<center><p><b><h1>COPOM</h1></b></p></center>
+<center><p><b><h2>CPI-2</h2></b></p></center>
+<center><p><b><h2>PERÍCIAS</h2></b></p></center>
+<hr>
+<center><p><b><u><h3>INTERVENÇÃO POLICIAL</h3></u></b></p></center>
+<hr>
+<form name="intervencao1" id="intervencao1" action="intervencao2.html" method="post">
+<textarea id="campoTeste" name="campoTeste" style="display:none">A EQUIPE POLICIAL NO LOCAL INFORMA, OCORRÊNCIA ONDE HOUVE O USO DA FORÇA LETAL QUE SE DEU EM </textarea></form>
+
+<form name="intervencao1" id="intervencao1" action="intervencao2.html" method="post">
+<p><b><h3>QUE TIPO DE LOCAL ACONTECEU?</p>
+<SELECT onchange="selectedA(this.value)" VALUE="Boolean" id="campo1" name="campo1" style = "height: 50px; width:300px;font-size:18px;text-transform:uppercase">
+<OPTION VALUE="NÃO INFORMADO"></OPTION>
+<OPTION VALUE="ESTABELECIMENTO COMERCIAL,">ESTAB. COMERCIAL</OPTION>
+<OPTION VALUE="RESIDÊNCIA,">RESIDÊNCIA</OPTION>
+<OPTION VALUE="VIA PÚBLICA,">VIA PÚBLICA</OPTION>
+<OPTION VALUE="OUTROS,">OUTROS</OPTION></b></SELECT>
+
+<div class="especifique1" style="display:none;text-transform:uppercase">
+<p><b>ESPECIFIQUE:</p>
+<input type "text" id="campo1_1_1" name="campo1_1_1" placeholder="NOME DO COMERCIO, CRUZAMENTO, REFERÊNCIA, ESPECIFIQUE O LOCAL... " style = "height: 50px; width:850px; font-size: 18px;text-transform:uppercase"></b></p>
+</div>
+<script>
+
+        function selectedA(value){
+		var especifique1= document.getElementsByClassName('especifique1');
+			if((value !="NÃO INFORMADO")&&(value!="RESIDÊNCIA,")){
+			especifique1[0].style.display='block';
+			}else{
+			especifique1[0].style.display = 'none';
+			}
+			}
+
+</script>
+</form>
+<form name="intervencao1" id="intervencao1" action="intervencao2.html" method="post">
+<p><b>TEM INDIVÍDUOS EM ÓBITO?</p>
+<SELECT VALUE="Boolean" id="campo1_1" name="campo1_1" style = "height: 50px; width:300px;font-size: 18px;">
+<OPTION VALUE=" "></OPTION>
+<OPTION VALUE=", TEM INDIVÍDUOS EM ÓBITO: ">SIM</OPTION>
+<OPTION VALUE=", NÃO TEM INDIVÍDUOS EM ÓBITO, ">NÃO</OPTION></b></SELECT>
+
+<p><b>ESPECIFICAR O LOCAL AONDE ESTA(ÃO) O(S) CORPO(S):</p>
+<input type "text" id="campo1_2" name="campo1_2" placeholder="O CORPO ESTÁ NA RUA, MATO, CÔMODO, DA CASA, MARGEM DO RIO, DETALHES..." style = "height: 50px; width:850px; font-size: 18px;text-transform:uppercase" ></b>
+</form>
+
+<form name="intervencao1" id="intervencao1" action="intervencao2.html" method="post">
+<p><b>O LOCAL ESTÁ PRESERVADO?</p>
+<SELECT VALUE="Boolean" id="campo1_3" name="campo1_3" style = "height: 50px; width:300px;font-size: 18px;">
+<OPTION VALUE=" "></OPTION>
+<OPTION VALUE=", O LOCAL ESTÁ PRESERVADO, ">SIM</OPTION>
+<OPTION VALUE=", O LOCAL NÃO ESTÁ PRESERVADO, ">NÃO</OPTION></b></p></SELECT>
+<p><b>COMO SE DEU OS FATOS:</p>
+<input type "text" id="campo1_4" name="campo1_4" placeholder="REVIDE DOS DISPAROS, ETC... " style = "height: 50px; width:850px; font-size: 18px;"></b>
+</form>
+
+<form name="intervencao1" id="intervencao1" action="intervencao2.html" method="post">
+<p><b>O SOCORRO MÉDICO FOI NO LOCAL?</p>
+<SELECT VALUE="Boolean" id="campo1_5" name="campo1_5" style = "height: 50px; width:300px;font-size: 18px;">
+<OPTION VALUE=" "></OPTION>
+<OPTION VALUE=", O SOCORRO MÉDICO FOI NO LOCAL:">SIM</OPTION>
+<OPTION VALUE=", O SOCORRO MÉDICO NÃO FOI NO LOCAL,">NÃO</OPTION></b></SELECT>
+</form>
+
+<form name="intervencao1" id="intervencao1" action="intervencao2.html" method="post">
+<p><b>QUAL MODALIDADE?</p>
+<SELECT value="Boolean" id="campo1_6" name="campo1_6" style = "height: 50px; width:300px;font-size: 18px;">
+<OPTION VALUE=" "></OPTION>
+<OPTION VALUE="SAMU -">SAMU</OPTION>
+<OPTION VALUE="BOMBEIRO -">BOMBEIRO</OPTION>
+<OPTION VALUE="OUTROS -">OUTROS</OPTION></b></SELECT>
+</form>
+
+<form name="intervencao1" id="intervencao1" action="intervencao2.html" method="post">
+<p><b>QUAL O PREFIXO?</p>
+<input type "text" id="campo1_7" name="campo1_7" placeholder="EXEMPLO UR07101, A-01" style = "height: 50px; width:300px; font-size: 18px;text-transform:uppercase"></b>
+</form>
+
+<form name="intervencao1" id="intervencao1" action="intervencao2.html" method="post">
+<p><b>NOME DO ENCARREGADO/PROFISSIONAL DA SAÚDE:</p>
+<input type "text" id="campo1_8" name="campo1_8" placeholder="NOME E CRM" style = "height: 50px; width:300px; font-size: 18px;text-transform:uppercase"></b>
+</form>
+
+<form name="intervencao1" id="intervencao1" action="intervencao2.html" method="post">
+<p><b>PARA ONDE FOI/FORAM SOCORRIDO(S)?</p>
+<input type "text" id="campo1_9" name="campo1_9" placeholder="CASO NÃO TEVE NINGUEM SOCORRIDO, SÓ CONSTAR QUE O CORPO ESTA NO LOCAL... " style = "height: 50px; width:850px; font-size: 18px;text-transform:uppercase"></b>
+</form>
+
+<form name="intervencao1" id="intervencao1" action="intervencao2.html" method="post">
+<p><b>TEM OBJETOS A SEREM RECOLHIDOS NO LOCAL?</p>
+<SELECT VALUE="Boolean" id="campo1_10" name="campo1_10" style = "height: 50px; width:300px;font-size: 18px;">
+<OPTION VALUE=" "></OPTION>
+<OPTION VALUE=", TEM OBJETOS A SEREM RECOLHIDOS NO LOCAL:">SIM</OPTION>
+<OPTION VALUE=", NÃO TEM OBJETOS A SEREM RECOLHIDOS NO LOCAL,">NÃO</OPTION></b></p></SELECT>
+<p><b>ESPECIFIQUE:</p>
+<input type "text" id="campo1_11" name="campo1_11" placeholder="CÁPSULAS, FACA OU OUTROS OBJETOS... " style = "height: 50px; width:850px; font-size: 18px;"></b>
+</form>
+
+<form name="intervencao1" id="intervencao1" action="intervencao2.html" method="post">
+<p><b>POSSUI MARCAS DE SANGUE, TIROS OU OUTROS?</p>
+<SELECT VALUE="Boolean" id="campo1_12" name="campo1_12" style = "height: 50px; width:300px;font-size: 18px;">
+<OPTION VALUE=" "></OPTION>
+<OPTION VALUE="TEM MARCAS DE SANGUE/TIROS: ">SIM</OPTION>
+<OPTION VALUE="NÃO TEM MARCAS DE SANGUE/TIROS, ">NÃO</OPTION></b></SELECT>
+<p><b>ESPECIFIQUE:</p>
+<input type "text" id="campo1_13" name="campo1_13" placeholder="EXEMPLO: MARCAS DE SANGUE NO INTERIOR DO VEICULO... " style = "height: 50px; width:850px; font-size: 18px;text-transform:uppercase"></b>
+</form>
+
+<form name="intervencao1" id="intervencao1" action="intervencao2.html" method="post">
+<p><b>TEM INDIVÍDUOS DETIDOS?</p>
+<SELECT VALUE="Boolean" id="campo1_14" name="campo1_14" style = "height: 50px; width:300px;font-size: 18px;">
+<OPTION VALUE=" "></OPTION>
+<OPTION VALUE="TEM INDIVÍDUOS DETIDOS:">SIM</OPTION>
+<OPTION VALUE="NÃO TEM INDIVÍDUOS DETIDOS,">NÃO</OPTION></b></SELECT>
+<p><b>ESPECIFIQUE:</p>
+<input type "text" id="campo1_15" name="campo1_15" placeholder="NOME E RG OU SE É MAIOR OU MENOR " style = "height: 50px; width:850px; font-size: 18px;text-transform:uppercase"></b>
+</form>
+
+<form name="intervencao1" id="intervencao1" action="intervencao2.html" method="post">
+<p><b>TEM VEÍCULOS ENVOLVIDOS?</p>
+<SELECT VALUE="Boolean" id="campo1_16" name="campo1_16" style = "height: 50px; width:300px;font-size: 18px;">
+<OPTION VALUE=" "></OPTION>
+<OPTION VALUE="TEM VEÍCULOS ENVOLVIDOS:">SIM</OPTION>
+<OPTION VALUE="NÃO TEM VEÍCULOS ENVOLVIDOS,">NÃO</OPTION></b></SELECT>
+<p><b>ESPECIFIQUE:</p>
+<input type "text" id="campo1_17" name="campo1_17" placeholder="PLACAS E CASO NECESSÁRIO COLOQUE O QUE PERICIAR NO VEICULO... " style = "height: 50px; width:850px; font-size: 18px;text-transform:uppercase"></b>
+</form>
+
+<form name="intervencao1" id="intervencao1" action="intervencao2.html" method="post">
+<p><b>POSSUI IDENTIFICAÇÃO DO INDIVÍDUO EM ÓBITO?</p>
+<SELECT VALUE="Boolean" id="campo1_18" name="campo1_18" style = "height: 50px; width:300px;font-size: 18px;">
+<OPTION VALUE=" "></OPTION>
+<OPTION VALUE="TEM IDENTIFICAÇÃO DO INDIVÍDUO EM ÓBITO:">SIM</OPTION>
+<OPTION VALUE="NÃO TEM IDENTIFICAÇÃO DO INDIVÍDUO EM ÓBITO,">NÃO</OPTION></b></SELECT>
+</form>
+
+<form name="intervencao1" id="intervencao1" action="intervencao2.html" method="post">
+<p><b>NOME:</p>
+<input type "text" id="campo1_19" name="campo1_19" placeholder="CASO NEGATIVO DEIXE BRANCO" style = "height: 50px; width:300px; font-size: 18px;text-transform:uppercase"></b>
+</form>
+
+<form name="intervencao1" id="intervencao1" action="intervencao2.html" method="post">
+<p><b>RG:</p>
+<input type "text" id="campo1_20" name="campo1_20" placeholder="CASO NEGATIVO DEIXE BRANCO" style = "height: 50px; width:300px; font-size: 18px;text-transform:uppercase"></b>
+</form>
+
+<form name="intervencao1" id="intervencao1" action="intervencao2.html" method="post">
+<p><b>IDADE:</p>
+<input type "text" id="campo1_21" name="campo1_21" placeholder="PODE SER APROXIMADA" style = "height: 50px; width:300px; font-size: 18px;text-transform:uppercase"></b>
+</form>
+
+<form name="intervencao1" id="intervencao1" action="intervencao2.html" method="post">
+<p><b>SEXO:</p>
+<SELECT value="Boolean" id="campo1_22" name="campo1_22" style = "height: 50px; width:300px;font-size: 18px;">
+<OPTION VALUE=" "></OPTION>
+<OPTION VALUE=", SEXO MASCULINO,">MASCULINO</OPTION>
+<OPTION VALUE=", SEXO FEMININO,">FEMININO</OPTION></b></SELECT>
+</form>
+
+<form name="intervencao1" id="intervencao1" action="intervencao2.html" method="post">
+<p><b>PESO:</p>
+<input type "text" id="campo1_23" name="campo1_23" placeholder="EM KG" style = "height: 50px; width:300px; font-size: 18px;text-transform:uppercase"></b>
+</form>
+
+<form name="intervencao1" id="intervencao1" action="intervencao2.html" method="post">
+<p><b>ALTURA:</p>
+<input type "text" id="campo1_24" name="campo1_24" placeholder="EM METROS" style = "height: 50px; width:300px; font-size: 18px;text-transform:uppercase"></b>
+</form>
+
+<form name="intervencao1" id="intervencao1" action="intervencao2.html" method="post">
+<p><b>COR DA PELE DA VÍTIMA:</p>
+<input type "text" id="campo1_25" name="campo1_25" placeholder="PELE PARDA, BRANCA, PRETA" style = "height: 50px; width:300px; font-size: 18px;text-transform:uppercase"></b>
+</form>
+
+<form name="intervencao1" id="intervencao1" action="intervencao2.html" method="post">
+<p><b>OS FAMILIARES ESTÃO NO LOCAL?</p>
+<SELECT VALUE="Boolean" id="campo1_26" name="campo1_26" style = "height: 50px; width:300px;font-size: 18px;">
+<OPTION VALUE=" "></OPTION>
+<OPTION VALUE="OS FAMILIARES ESTÃO NO LOCAL,">SIM</OPTION>
+<OPTION VALUE="OS FAMILIARES NÃO ESTÃO NO LOCAL,">NÃO</OPTION>
+<OPTION VALUE="NÃO SABE INFORMAR SE OS FAMILIARES ESTÃO NO LOCAL,">NÃO SABE</OPTION></b></SELECT>
+</form>
+
+<form name="intervencao1" id="intervencao1" action="intervencao2.html" method="post">
+<p><b>A EQUIPE POLICIAL FOI ALVEJADA OU A VIATURA?</p>
+<SELECT VALUE="Boolean" id="campo1_27" name="campo1_27" style = "height: 50px; width:300px;font-size: 18px;">
+<OPTION VALUE=" "></OPTION>
+<OPTION VALUE="A EQUIPE POLICIAL/VIATURA FOI ALVEJADA:">SIM</OPTION>
+<OPTION VALUE="A EQUIPE POLICIAL NÃO FOI ALVEJADA, NEM A VIATURA,">NÃO</OPTION></b></SELECT>
+<p><b>ESPECIFIQUE:</p>
+<input type "text" id="campo1_28" name="campo1_28" placeholder="DISPAROS NO CAPÔ DA VIATURA... " style = "height: 50px; width:850px; font-size: 18px;text-transform:uppercase"></b>
+</form>
+
+<form name="intervencao1" id="intervencao1" action="intervencao2.html" method="post">
+<p><b>INFORMAÇÕES COMPLEMENTARES:</p>
+<input type "text" id="campo1_29" name="campo1_29" placeholder="PODE ACRESCENTAR QUALQUER OUTRA INFORMAÇÃO..." style = "height: 50px; width:850px; font-size: 18px;text-transform:uppercase"></b>
+</form>
+
+<form name="intervencao1" id="intervencao1" action="intervencao2.html" method="post">
+<textarea id="campoTeste2" name="campoTeste2" style="display:none">. DIANTE DOS FATOS, VERIFICAR JUNTO A AUTORIDADE DE POLICIA MILITAR / CIVIL SE HÁ INTERESSE DE ENVIAR PERICIA PARA O LOCAL.</textarea>
+<p></p>
+</form>
+
+<center><input type="button" value= "GERAR HISTÓRICO" style = "height: 50px; width:300px; font-size: 18px;" onclick="proximaPagina1();"></button></center>
+<center><input type="button" value= "LIMPAR DADOS" style = "height: 50px; width:300px; font-size: 18px;" onclick="proximaPagina2();"></button></center>
+<center><input type="button" value= "INÍCIO" style = "height: 50px; width:300px; font-size: 18px;" onclick="proximaPagina3();"></button></center>
+</body>
+</html>
